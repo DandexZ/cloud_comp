@@ -1,0 +1,18 @@
+{
+    "configurations": [
+      {
+        "name": "Win64",
+        "includePath": [
+          "D:/fileForStudy/myInclude/**",
+          "${workspaceFolder}/**"
+        ],
+        "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+        "windowsSdkVersion": "10.0.18362.0",
+        "compilerPath": "D:/fileForStudy/MinGW/bin/g++.exe",
+        "cStandard": "c17",
+        "cppStandard": "c++17",
+        "intelliSenseMode": "gcc-x64"
+      }
+    ],
+    "version": 4
+  }
