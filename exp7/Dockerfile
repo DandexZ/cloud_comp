@@ -16,4 +16,4 @@ RUN g++ -o cloud_comp main.cpp
 ENV LANG=C.UTF-8
 ENV LC_ALL=C.UTF-8
 
-CMD ["./cloud_comp"]
+CMD ["./cloud_comp/exp7"]
