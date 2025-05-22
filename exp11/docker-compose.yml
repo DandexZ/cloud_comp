@@ -1,0 +1,44 @@
+services:
+  nginx:
+    build: ./nginx
+    ports:
+      - "80:80"
+    depends_on:
+      - tomcat1
+      - tomcat2
+      - tomcat3
+      - tomcat4
+    networks:
+      - lb-network
+
+  tomcat1:
+    build: ./tomcat-app
+    environment:
+      - server.name=Tomcat-1
+    networks:
+      - lb-network
+
+  tomcat2:
+    build: ./tomcat-app
+    environment:
+      - server.name=Tomcat-2
+    networks:
+      - lb-network
+
+  tomcat3:
+    build: ./tomcat-app
+    environment:
+      - server.name=Tomcat-3
+    networks:
+      - lb-network
+
+  tomcat4:
+    build: ./tomcat-app
+    environment:
+      - server.name=Tomcat-4
+    networks:
+      - lb-network
+
+networks:
+  lb-network:
+    driver: bridge
